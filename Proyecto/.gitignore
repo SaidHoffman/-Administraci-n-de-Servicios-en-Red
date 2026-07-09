@@ -1,0 +1,12 @@
+# Ignorar archivos de imagen IOS y archivos temporales de GNS3
+*.image
+*.bin
+*.img
+*.qcow2
+*.vmdk
+*.ova
+*.ghost
+*.cfg
+project-files/dynamips/*/configs/*
+project-files/dynamips/*/c7200_i*_bootflash/*
+project-files/dynamips/*/c7200_i*_bootflash/

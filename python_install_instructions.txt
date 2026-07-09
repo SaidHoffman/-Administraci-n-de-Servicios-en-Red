@@ -1,0 +1,52 @@
+
+### Pasos para instalar Python 3.8 y pip en Ubuntu 16.04
+
+1. **Actualizar sistema e instalar dependencias necesarias para la compilación:**
+```bash
+apt-get update
+apt-get install -y build-essential checkinstall \
+    libreadline-gplv2-dev libncursesw5-dev libssl-dev \
+    libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev \
+    zlib1g-dev openssl libffi-dev python3-dev wget
+```
+
+2. **Descargar y compilar Python 3.8 desde código fuente:**
+```bash
+cd /usr/src
+wget https://www.python.org/ftp/python/3.8.16/Python-3.8.16.tgz
+tar xzf Python-3.8.16.tgz
+cd Python-3.8.16
+./configure --enable-optimizations
+make altinstall
+```
+
+3. **Verificar instalación de Python 3.8:**
+```bash
+python3.8 --version
+```
+
+4. **Instalar pip para Python 3.8:**
+```bash
+wget https://bootstrap.pypa.io/get-pip.py
+python3.8 get-pip.py
+```
+
+5. **Verificar instalación de pip:**
+```bash
+pip3 --version
+```
+
+6. **Instalar las bibliotecas necesarias:**
+```bash
+pip3 install flask netmiko paramiko networkx matplotlib apscheduler
+```
+
+7. **(Opcional) Limpiar archivos de compilación para liberar espacio:**
+```bash
+rm -rf /usr/src/Python-3.8.16*
+apt-get autoremove -y
+apt-get clean
+```
+
+---
+Con estos pasos, tendrás Python 3.8 y las bibliotecas instaladas en tu sistema.
