@@ -1,34 +1,31 @@
-# Administración de Servicios en Red
+# Laboratorio de redes con GNS3
 
-Este repositorio contiene un laboratorio de red reproducible creado en GNS3. La topología simula una infraestructura de red más realista de lo que suele verse en un ejercicio básico: combina routers Cisco, switches, equipos finales, hosts virtualizados y servicios en contenedores para mostrar cómo se interconectan diferentes capas de una red.
+Este proyecto presenta una topología de red simulada en GNS3 diseñada para demostrar habilidades reales en administración de servicios en red. No es solo un ejercicio académico: muestra una infraestructura funcional en la que distintos elementos de red interactúan para ofrecer conectividad, segmentación y servicios de red de forma práctica.
 
-## ¿Qué hace este proyecto?
+## Qué demuestra este proyecto
 
-La topología permite practicar y demostrar conceptos fundamentales de redes, como:
+La topología incluye:
 
-- enrutamiento entre redes
-- conmutación y segmentación de tráfico
-- comunicación entre equipos finales
-- integración de dispositivos virtuales y contenedores
-- prueba de conectividad y comportamiento de una red pequeña pero funcional
+- routers Cisco 7200 para enrutamiento entre redes
+- switches para conmutación y segmentación del tráfico
+- equipos finales y hosts virtuales para probar conectividad
+- integración con entornos virtualizados y contenedores para ampliar el laboratorio
 
-## ¿Por qué es interesante?
+## Por qué es relevante para un perfil de redes
 
-Este laboratorio no es solo un dibujo de red: es una herramienta práctica para entender cómo se construyen, prueban y operan entornos de red reales. Lo hace más valioso porque mezcla tecnologías tradicionales de red con entornos modernos de virtualización, lo que ayuda a conectar la teoría con escenarios más cercanos a la práctica profesional.
+Este tipo de proyecto es valioso porque refleja situaciones reales de trabajo en redes: construir, probar y comprender cómo se comporta una infraestructura cuando varios dispositivos deben cooperar. Para un reclutador, demuestra capacidad para trabajar con herramientas de virtualización, comprender arquitectura de red y pensar en escenarios de operación y soporte técnico.
 
-## Estructura del repositorio
+## Qué encontrarás en el repositorio
 
-- [Proyecto](Proyecto) — carpeta principal con el proyecto GNS3 y los archivos asociados
-- [Proyecto/README.md](Proyecto/README.md) — descripción adicional del laboratorio
+- [Proyecto](Proyecto) — carpeta principal con el laboratorio GNS3 y sus recursos asociados
+- [Proyecto/README.md](Proyecto/README.md) — descripción técnica del proyecto
 
-## Requisitos
-
-Para abrir y ejecutar la topología se necesita:
+## Requisitos para abrirlo
 
 - GNS3 instalado
 - una imagen de IOS válida para los routers Cisco 7200
-- el entorno compatible con las máquinas virtuales o contenedores incluidos en la topología
+- entorno compatible con los recursos virtuales incluidos en la topología
 
 ## Nota importante
 
-La imagen de IOS no se incluye en este repositorio. Debe estar disponible localmente para poder iniciar la topología correctamente.
+La imagen de IOS no se distribuye con este repositorio; debe estar disponible localmente para ejecutar la topología correctamente.
