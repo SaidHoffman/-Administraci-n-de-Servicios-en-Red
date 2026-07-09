@@ -1,45 +1,34 @@
-# Proyecto de laboratorio de redes con GNS3
+# Laboratorio de redes con GNS3
 
-Este repositorio contiene un proyecto de GNS3 con una topología de laboratorio para practicar y demostrar conceptos de redes. Incluye el archivo de proyecto de GNS3 y los recursos asociados almacenados en la carpeta de proyecto.
+Este proyecto contiene una topología de GNS3 diseñada para estudiar cómo funcionan de forma conjunta distintos componentes de una red: routers, switches, hosts finales, nodos virtuales y entornos basados en contenedores.
 
-## ¿Qué incluye?
+## Qué representa esta topología
 
-- Archivo principal de GNS3: `project.gns3`
-- Carpeta con recursos del proyecto: `project-files/`
-- Topología con dispositivos Cisco 7200 y nodos VPCS
+La red incluida en este laboratorio está pensada para mostrar un escenario más cercano a una infraestructura real, donde varios dispositivos deben comunicarse entre sí y cooperar para ofrecer conectividad. En la práctica, esto permite experimentar con:
 
-## Requisitos
+- interconexión entre redes
+- encaminamiento entre routers
+- transmisión de tráfico a través de switches
+- conexión de equipos finales y hosts remotos
+- uso de tecnologías virtualizadas para ampliar el laboratorio
 
-Para abrir y ejecutar este laboratorio necesitas:
+## Por qué es útil
 
-- GNS3 instalado
-- Una imagen de IOS válida para los routers Cisco 7200
-- Un sistema operativo compatible con GNS3
+Este tipo de laboratorio es interesante porque ayuda a comprender cómo se construyen y prueban redes de forma práctica. No se limita a ver una configuración estática: permite observar el comportamiento de una red cuando distintos elementos interactúan entre sí, lo cual es muy valioso para aprender administración de servicios en red.
 
-## Estructura del proyecto
+## Archivos incluidos
 
-```text
-Proyecto/
-├── project.gns3
-├── project-files/
-│   ├── captures/
-│   ├── dynamips/
-│   ├── vmware/
-│   └── vpcs/
-└── README.md
-```
+- [project.gns3](project.gns3) — definición de la topología del laboratorio
+- [project-files](project-files) — recursos y archivos de soporte del proyecto
+- [.gitignore](.gitignore) — exclusiones útiles para no subir artefactos innecesarios
 
-## Instrucciones de uso
+## Requisitos de uso
 
-1. Instala GNS3 en tu equipo.
-2. Abre el archivo `project.gns3` desde GNS3.
-3. Asegúrate de tener cargada la imagen de IOS correspondiente para los routers.
-4. Inicia la topología y configura los equipos según sea necesario.
+1. Instalar GNS3.
+2. Abrir [project.gns3](project.gns3) desde GNS3.
+3. Cargar la imagen de IOS necesaria para los routers Cisco 7200.
+4. Iniciar la topología y comenzar a probar la conectividad.
 
-## Nota importante
+## Nota
 
-El archivo de imagen IOS que usa este laboratorio es un recurso de software propietario y no se incluye en este repositorio. Debes tenerlo disponible localmente para poder ejecutar la topología.
-
-## Autor
-
-Este proyecto fue creado originalmente como un laboratorio de redes y se ha preparado para su publicación en GitHub.
+El laboratorio requiere recursos adicionales propios del entorno de simulación. La imagen de IOS no se distribuye con este repositorio.
