@@ -23,6 +23,27 @@ La API debería exponer operaciones para:
 - detectar y actualizar la topología de la red
 - generar una gráfica de la topología existente
 
+### Tabla de endpoints del API
+
+| Ruta | Método | Qué hace |
+| --- | --- | --- |
+| /usuarios | GET | Devuelve un JSON con los usuarios existentes en los routers, incluyendo nombre, permisos y dispositivos donde existen. |
+| /usuarios | POST | Agrega un nuevo usuario común a todos los routers y devuelve un JSON con la información del usuario creado. |
+| /usuarios | PUT | Actualiza un usuario común en todos los routers y devuelve un JSON con la información del usuario actualizado. |
+| /usuarios | DELETE | Elimina un usuario común de todos los routers y devuelve un JSON con la información del usuario eliminado. |
+| /routers | GET | Devuelve la información general de todos los routers de la topología, incluyendo nombre, IP loopback, IP administrativa, rol, empresa, sistema operativo y enlaces a sus interfaces activas. |
+| /routers/<hostname> | GET | Devuelve la información general de un router específico. |
+| /routers/<hostname>/interfaces | GET | Devuelve la información general de las interfaces del router indicado, incluyendo tipo, número, IP, máscara de red, estado y enlace al router conectado si aplica. |
+| /routers/<hostname>/usuarios | GET | Devuelve los usuarios existentes en un router específico, incluyendo nombre y permisos. |
+| /routers/<hostname>/usuarios | POST | Agrega un nuevo usuario al router indicado y devuelve la información del usuario creado. |
+| /routers/<hostname>/usuarios | PUT | Actualiza un usuario del router indicado y devuelve la información del usuario actualizado. |
+| /routers/<hostname>/usuarios | DELETE | Elimina un usuario del router indicado y devuelve la información del usuario eliminado. |
+| /topologia | GET | Devuelve un JSON con los routers existentes en la topología y enlaces a sus vecinos. |
+| /topologia | POST | Activa un demonio que cada 5 minutos explora la red para detectar cambios en la topología. |
+| /topologia | PUT | Permite cambiar el intervalo de tiempo en el que el demonio explora la topología. |
+| /topologia | DELETE | Detiene el demonio que explora la topología. |
+| /topologia/grafica | GET | Devuelve un archivo gráfico con la visualización de la topología existente. |
+
 ## Qué representa esta topología
 
 La topología incluida en este proyecto simula una infraestructura de red con routers, switches, hosts y recursos virtualizados que sirven como entorno de prueba para validar el comportamiento del sistema. Incluye dispositivos como routers Cisco, switches y equipos finales, lo que permite trabajar con un escenario más cercano a una red real.
